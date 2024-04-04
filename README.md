@@ -9,8 +9,11 @@ Input data should be a single line in the format automatically applied when writ
 Functionality currently cannot be guaranteed if this format is not followed.
 
 Functions Included in this Module:
+
 strToData('string') - converts 'string' into the appropriate data type(s). Calls on all other functions during execution
+
 strToNumber('string') - converts any number in string format (whole or decimal) to an int or float, whichever is appropriate. Ignores any characters after digits end (for example, '-12.34abcd' becomes -12.34).
+
 strCutter(string',startCharacter) - determines when a string ends and returns the contents of the string. Not very useful by itself. Only works when the beginning quote is omitted. The startCharacter argument refers to whether the string began with an apostrophe or quotation mark. Doesn't work for triple apostrophes currently. Also ignores any characters after the string ends.
 
 Please let me know if you encounter any bugs or issues!
