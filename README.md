@@ -5,5 +5,7 @@ for any combination of strings, ints, floats, lists, sets, and tuples, including
 
 StringToData currently does not support dictionary use.
 
-Input data should be in the format automatically applied when writing data to .txt files using the .write() method.
+Input data should be a single line in the format automatically applied when writing data to .txt files using the .write() method.
 Functionality currently cannot be guaranteed if this format is not followed.
+
+Please let me know if you encounter any bugs or issues
