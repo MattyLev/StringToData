@@ -42,7 +42,7 @@ def strToData(string,startChr = ''):
                 newSet = set(newSet)
                 totalData.append(newSet)
                 i += shift
-            case '0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9':
+            case '0'|'1'|'2'|'3'|'4'|'5'|'6'|'7'|'8'|'9'|'-':
                 newNum,shift = strToNumber(string[i:])
                 totalData.append(newNum)
                 i += shift - 1
@@ -76,7 +76,11 @@ def strToNumber(string):
     decPlaces = 0
     isNumber = True
     isFloat = False
+    isNegative = False
     i = 0
+    if string[0] == '-':
+        isNegative = True
+        i += 1
     while isNumber == True:
         if i == len(string):
             i += 1
@@ -94,6 +98,8 @@ def strToNumber(string):
             isNumber = False
     if isFloat == True:
         number = number / (10**decPlaces)
+    if isNegative == True:
+        number = number * (-1)
     return number,i
 
 def strCutter(string,startChr):
